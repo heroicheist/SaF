@@ -19,9 +19,15 @@ body{
   padding: 10px;
   text-decoration: none; 
   border-bottom: 1px solid transparent;
-transition: all ease-in-out 0.3s;
+transition: all ease-in-out 0.2s;
 }
 .App-link:hover{
   border-color: #61dafb;
   padding-bottom: 2px;
+}
+.active{
+  border-radius: 3px;
+  color: #282c34;
+  transition: all ease-in-out 0.2s;
+  background-color: #61dafb;
 }
