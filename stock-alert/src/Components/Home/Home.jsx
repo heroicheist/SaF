@@ -22,12 +22,10 @@ const Home = () => {
     const item = searchItem.current.value;
     const arr =  dummy.filter((dummy) => {
       if (dummy.stockname.toLowerCase() === item.toLowerCase()) {
-        console.log(dummy);
         return dummy;
       } 
     })
     setStock(arr)
-    console.log(arr);
     searchItem.current.value = "";
   };
   return (
