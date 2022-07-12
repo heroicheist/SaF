@@ -16,6 +16,7 @@ function App() {
         <NavLink className="App-link" to="/">Home</NavLink>
         <NavLink className="App-link" to="/logIn">LogIn/SignUp</NavLink>
       </div>
+      <hr/>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/alerts" element={<Alert />} />

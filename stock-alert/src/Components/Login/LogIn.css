@@ -1,0 +1,29 @@
+.fSet{
+    width: 50%;
+    color: #61dafb;
+    padding: 10px;
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282c34;
+    padding: 10px;
+}
+Legend{
+    color: black;
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+}
+.btnSub{
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 15%;
+    background-color: #61dafb;
+    cursor: pointer;
+}
+.liSign{
+    
+}
