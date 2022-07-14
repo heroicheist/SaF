@@ -1,0 +1,40 @@
+
+.alertcard {
+    display: flex;
+    align-items: flex-start;
+  background-color: azure;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+.alertcard:hover{
+    box-shadow: 1px 1px 4px 4px #61dafb;
+}
+.hidden{
+  visibility: hidden;
+ border-radius: 0px;
+  background-color: whitesmoke;
+  color: whitesmoke;
+  transition: all ease-in-out 0.1s;
+}
+.nothidden{
+  border-radius: 7px;
+  border: 1px solid #282c34;
+  cursor: pointer;
+  visibility: visible;
+  background-color: #282c34;
+  color: #61dafb;
+  transition: all ease-in-out 0.15s;
+}
+.edittor{
+  position: relative;
+}
+.hoverboard{
+  margin: 0.5em;
+  padding: 1em  ;
+}

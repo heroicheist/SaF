@@ -38,6 +38,7 @@ li {
 }
 input{
     background-color: #40454e;
+    color: aliceblue;
     border: 1px solid #282c34;
 }
 input:hover{
