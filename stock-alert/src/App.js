@@ -11,12 +11,11 @@ function App() {
       <div className="App-header">
         <p>Stock Alert</p>
       </div>
-      <div className="App-header">
+      <div className="links App-header ">
         <NavLink className="App-link" to="/alerts">Alerts</NavLink>
         <NavLink className="App-link" to="/">Home</NavLink>
         <NavLink className="App-link" to="/logIn">LogIn/SignUp</NavLink>
       </div>
-      <hr/>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/alerts" element={<Alert />} />

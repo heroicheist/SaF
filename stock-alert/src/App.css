@@ -42,3 +42,6 @@ transition: all ease-in-out 0.5s;
   color: aliceblue;
   background-color: #21263c;
 }
+.links{
+  margin-bottom: 0.5rem;
+}
