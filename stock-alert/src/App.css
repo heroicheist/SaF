@@ -1,44 +1,44 @@
 body{
   margin: 0%;
-  background-color: #282c34;
-  color: #61dafb;
+  background-color: #21263c;
+  color: aliceblue;
 }
 .App {
   text-align: center;
 }
 .App-header {
-  background-color: #282c34;
+  background-color: #181c2e;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #61dafb;
+  color: whitesmoke;
   width: 100%;
 }
 .App-link {
-  color: #61dafb;
+  color: aliceblue;
   padding: 10px;
   text-decoration: none; 
   border-bottom: 1px solid transparent;
 transition: all ease-in-out 0.5s;
 }
 .App-link:hover{
-  border-color: #61dafb;
+  border-color: #208aed;
   padding-bottom: 2px;
-  background-color: #61dafb;
+  background-color: #208aed;
   color: #282c34;
   border-radius:5px ;
 }
 .active{
   border-radius: 3px;
   color: #282c34;
-  background-color: #61dafb;
+  background-color: #208aed;
 }
 .active:hover{
   padding: 10px;
   border-radius: 3px;
   border: 1px solid;
-  color: #61dafb;
-  background-color: #282c34;
+  color: aliceblue;
+  background-color: #21263c;
 }

@@ -71,7 +71,7 @@ import api from "../../Api/api";
 import "./Home.css";
 
 function Home() {
-    const dummy = [
+  const dummy = [
     {
       stockname: "Gimmick",
       stockticker: "Gi",
@@ -92,29 +92,34 @@ function Home() {
   const [companylist, setCompanylist] = useState([]);
   const [autolist, setAutolist] = useState([]);
 
+  useEffect(() => {
+    fetchList();
+  }, []);
+  useEffect(()=>{
+    let inpt = document.getElementById("searchTerm")
+  inpt.addEventListener('keydown' , (e)=>{if(e.keyCode ===13){console.log(e.target.value)}})
+  return ()=> inpt.removeEventListener
+  },[searchTerm])
+  const fetchList = async () => {
+    await api.get("/companylist").then((response) => {
+      // console.log(response.data.map((res)=>res.stockname.split(" ").join("").toUpperCase()))
+      setCompanylist(response.data.map((res) => res.stockname));
+    });
+  };
   
-useEffect(()=>{
-  fetchList()
-},[])
-  const fetchList = async()=>{
-    await api.get("/companylist").then((response)=>{setCompanylist(response.data)})
-  }
   const inSearch = (e) => {
-    const value = e.target.value
+    const value = e.target.value;
     SetSearchTerm(value);
-    const val = e.target.value.split(" ").join("").toLowerCase();
-    const match = companylist.filter((company)=>{
-      if( company.stockname.split(" ").join("").toLowerCase() ===val){
-        console.log(company.stockname)
-        return company
-      }
-    })
-    console.log(match)
-    setAutolist(match)
+    const match = companylist.filter((companylist) => {
+      const regex = new RegExp(`${searchTerm}`, "ig");
+      return companylist.match(regex);
+    });
+    setAutolist(match);
   };
   return (
-    <div>
+    <div className="searchStock">
       <input
+        id="searchTerm"
         className="searchItem2"
         type="text"
         placeholder="Search For `Stock Name"
@@ -122,9 +127,19 @@ useEffect(()=>{
         onChange={inSearch}
       />
       <div>
-       {autolist && autolist.map((company,index)=>{
-        return <div key={index}>{company.stockname}</div>
-       })}
+        {autolist.length>0 &&
+          autolist.map((company, index) => {
+            if (index < 7)
+              return (
+                <div
+                  className="autocomplete"
+                  onClick={() => SetSearchTerm(company)}
+                  key={index}
+                >
+                  {company}
+                </div>
+              );
+          })}
       </div>
     </div>
   );
